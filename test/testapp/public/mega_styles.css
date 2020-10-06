@@ -1,0 +1,210 @@
+/*
+   Mega Travel Layout Style Sheet
+  
+   Filename: mega_styles.css
+*/
+
+
+/* HTML and Body styles */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: white;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0 auto;
+    /* max-width: 1366px;*/
+    background: white;
+}
+
+
+/* Header styles */
+
+header img#logoImg {
+    display: block;
+    width: 25%;
+    padding-right: 500px;
+}
+
+header #icon {
+    display: block;
+    padding-right: 10px;
+    height: 75px;
+    width: 75px;
+}
+
+header #icon img {
+    width: 100%;
+    height: auto;
+}
+
+header div#welcome_message {
+    display: block;
+}
+
+header {
+    background: #add8e6;
+    border-bottom: 25px solid #d3d3d3;
+    position: relative;
+    width: 100%;
+}
+
+.destination-cards {
+    margin-bottom: 30px;
+}
+
+
+/* Navigation list styles */
+
+nav {
+    margin-top: 20px;
+    background: black;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ffa500;
+}
+
+
+/* Page footer styles */
+
+.intro {
+    margin: 30px 0;
+    padding: 0 10px;
+}
+
+.intro h1 {
+    margin-bottom: 15px;
+}
+
+.intro p {
+    line-height: 1.5;
+}
+
+@keyframes destinationCards {
+    from {
+        background-color: white;
+        color: black;
+        border-width: 1px;
+        padding: 15px;
+    }
+    to {
+        background-color: black;
+        color: white;
+        border-width: 5px;
+        padding: 11px;
+    }
+}
+
+.destination-card {
+    border: 1px solid black;
+    padding: 15px;
+    margin: 10px;
+}
+
+.destination-card:hover {
+    animation: destinationCards 2s;
+    color: white;
+    border: 5px solid black;
+    background: black;
+}
+
+.destination-card a {
+    color: black;
+    text-decoration: none;
+}
+
+.destination-card:hover a {
+    color: white;
+}
+
+.destination-card img {
+    width: 100%;
+}
+
+.destination-card h2 {
+    margin: 30px 0 15px;
+}
+
+.destination-card p {
+    line-height: 1.5;
+}
+
+.original-price {
+    color: grey;
+    text-transform: uppercase;
+}
+
+.current-price span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.saving {
+    color: green;
+}
+
+footer {
+    background: black;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    header {
+        align-items: center;
+        display: flex;
+    }
+    nav {
+        background: transparent;
+        margin-top: 0;
+        margin-left: 30px;
+    }
+    nav a {
+        color: black;
+        position: relative;
+        top: 0;
+        transition: top .5s, color .5s;
+    }
+    nav a:hover {
+        text-decoration: none;
+        color: #ffa500;
+        top: -10px;
+    }
+    .intro {
+        width: 50%;
+    }
+    .destination-cards {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    .destination-card {
+        display: inline-block;
+    }
+}
+
+@media only print {
+    nav {
+        display: none;
+    }
+}
